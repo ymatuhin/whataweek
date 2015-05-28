@@ -17,7 +17,9 @@
 	<div class="page-header">
 		<h1 class="project-name">Какая сейчас неделя?</h1>
 		<h2 class="project-tagline">Четная или нечетная?</h2>
-        <noscript><mark class="red">Включите JavaScript для корректной работы ресурса!</mark></noscript>
+		<noscript>
+			<mark class="red">Включите JavaScript для корректной работы ресурса!</mark>
+		</noscript>
 	</div>
 
 	<div class="main-content">
@@ -27,8 +29,10 @@
 			</a> Дата и время</h3>
 
 		<blockquote>
-			<p>Сегодня <span id="date"></span> (
-				<strong><span id="week"></span> неделя в году</strong>). *</p>
+			<p>Сегодня
+				<span id="date"></span> (
+				<strong>
+					<span id="week"></span> неделя в году</strong>). *</p>
 		</blockquote>
 
 
@@ -37,11 +41,14 @@
 				<span class="octicon octicon-link">#</span>
 			</a> Учебная неделя</h3>
 
-		<p>Весненний семестр, <span id="years"></span> учебного года.</p>
+		<p>Весненний семестр,
+			<span id="years"></span> учебного года.</p>
 		<blockquote>
 			<p>
 				<big>
-					<mark id="red" class="red">НЕ</mark>четная неделя <span id="warnEndWeekZ">**</span></big>
+					<mark id="red" class="red">НЕ</mark>четная неделя
+					<span id="warnEndWeekZ">**</span>
+				</big>
 			</p>
 		</blockquote>
 
@@ -81,42 +88,47 @@
 		</div>
 	</div>
 
-    <script src="moment.min.js"></script>
-    <!-- <script src="ru.js"></script> -->
-    <script>
+	<script src="moment.min.js"></script>
+	<!-- <script src="ru.js"></script> -->
+	<script>
 		moment.locale('ru');
 
-        function getISOWeeks(y) { var d, isLeap; d = new Date(y, 0, 1); isLeap = new Date(y, 1, 29).getMonth() === 1; return d.getDay() === 4 || isLeap && d.getDay() === 3 ? 53 : 52 }
+		function getISOWeeks(y) {
+			var d, isLeap;
+			d = new Date(y, 0, 1);
+			isLeap = new Date(y, 1, 29).getMonth() === 1;
+			return d.getDay() === 4 || isLeap && d.getDay() === 3 ? 53 : 52
+		}
 
-        var curWeek = '',
+		var curWeek = '',
 			years = '';
 
-        var today, year, week, prevYear, nextYear, this1sp, this1spF, prev1sp, prev1spF, chetnaya;
+		var today, year, week, prevYear, nextYear, this1sp, this1spF, prev1sp, prev1spF, chetnaya;
 
-		function update () {
+		function update() {
 			today = moment();
 			year = moment().format('YYYY')
 			prevYear = moment().subtract(1, 'y').format('YYYY');
 			nextYear = +year + 1 + ''
 
 			this1sp = moment(year + '-09-01', 'YYYY-MM-DD');
-	        this1spF = this1sp.format('WW');
-	        prev1sp = moment(year + '-09-01', 'YYYY-MM-DD').subtract(1, 'year');
-	        prev1spF = prev1sp.format('WW');
+			this1spF = this1sp.format('WW');
+			prev1sp = moment(year + '-09-01', 'YYYY-MM-DD').subtract(1, 'year');
+			prev1spF = prev1sp.format('WW');
 
-	        week = moment().format('WW');
+			week = moment().format('WW');
 
 			if (today.isBefore(this1sp)) {
-	            var daysInYear = getISOWeeks(+prevYear);
-	            years = prevYear + '/' + year;
-	            curWeek = daysInYear - prev1spF + +week;
+				var daysInYear = getISOWeeks(+prevYear);
+				years = prevYear + '/' + year;
+				curWeek = daysInYear - prev1spF + +week;
 
-	        } else {
-	            years = year + '/' + nextYear;
-	            curWeek = week - this1spF;
-	        }
+			} else {
+				years = year + '/' + nextYear;
+				curWeek = week - this1spF;
+			}
 
-        	chetnaya = !!(curWeek % 2);
+			chetnaya = !!(curWeek % 2);
 		}
 
 		update();
@@ -127,7 +139,7 @@
 		var _wEW = document.getElementById('warnEndWeek');
 		var _wEWz = document.getElementById('warnEndWeekZ');
 
-		function updateHTML () {
+		function updateHTML() {
 			update();
 
 			console.log('today', today.format('e'));
@@ -141,8 +153,40 @@
 
 		updateHTML();
 		setInterval(updateHTML, 1000);
+	</script>
 
-    </script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function(d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter30600982 = new Ya.Metrika({
+						id: 30600982,
+						clickmap: true
+					});
+				} catch (e) {}
+			});
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function() {
+					n.parentNode.insertBefore(s, n);
+				};
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else {
+				f();
+			}
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript>
+		<div>
+			<img src="//mc.yandex.ru/watch/30600982" style="position:absolute; left:-9999px;" alt="" />
+		</div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
