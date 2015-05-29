@@ -39,10 +39,8 @@
 		<h3>
 			<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true">
 				<span class="octicon octicon-link">#</span>
-			</a> Учебная неделя</h3>
+			</a> Учебная неделя (<span id="years"></span> учебный год)</h3>
 
-		<p>Весненний семестр,
-			<span id="years"></span> учебного года.</p>
 		<blockquote>
 			<p>
 				<big>
@@ -138,12 +136,14 @@
 		var _r = document.getElementById('red');
 		var _wEW = document.getElementById('warnEndWeek');
 		var _wEWz = document.getElementById('warnEndWeekZ');
+		var _y = document.getElementById('years');
 
 		function updateHTML() {
 			update();
 
 			console.log('today', today.format('e'));
 
+			_y.innerHTML = years;
 			_w.innerHTML = moment().format('WW');
 			_d.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss');
 			_r.style.display = (chetnaya) ? 'none' : '';
