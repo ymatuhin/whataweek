@@ -243,14 +243,21 @@ mark {
     border-radius: 3px;
 }
 
-mark.red {
+.red {
     background-color: transparent;
     color: red;
 }
 
-mark.yellow {
+.yellow {
     background-color: transparent;
     color: orange;
+}
+
+.yellow_black {
+    color: yellow;
+    padding: 0 .2em;
+    margin-right: .1rem;
+    background-color: #000 ;
 }
 
 small {

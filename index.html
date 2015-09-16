@@ -29,8 +29,7 @@
 			</a> Дата и время</h3>
 
 		<blockquote>
-			<p>Сегодня
-				<span id="date"></span>
+			<p><span id="date"></span>
 				— <strong><span id="week"></span> неделя в году</strong>*</p>
 		</blockquote>
 
@@ -57,8 +56,8 @@
 		<p id="sep1">Первое сентября — всегда нечетная неделя (первая же) 😊</p>
 
 		<small>
-			<p style="margin-bottom:.2em; margin-top: 3em;">
-				<mark id="warnEndWeek" class="red">** текущая неделя подходит к концу, следующая будет ЧЕТНАЯ, не перепутайте :-)</mark>
+			<p style="margin-bottom:.2em; margin: 3em 0;">
+				<mark id="warnEndWeek" class="red"><big><big>** текущая неделя подходит к концу, следующая будет <mark><span id="red2" class="yellow_black">НЕ</span>ЧЕТНАЯ</mark>, не перепутайте :-)</big></big></mark>
 			</p>
 			<p style="margin-top:0">
 				<mark class="yellow">* дата и время берутся из установок на вашем устройстве. Установите текущую дату и время на вашем устройстве для правильного определения четности недели</mark>
@@ -111,9 +110,9 @@
 		var today, year, week, prevYear, nextYear, this1sp, this1spF, prev1sp, prev1spF, chetnaya;
 
 		function update() {
-			today = moment();
-			year = moment().format('YYYY')
-			prevYear = moment().subtract(1, 'y').format('YYYY');
+			today = moment().add(11, 'd')
+			year = moment(today).format('YYYY')
+			prevYear = moment(today).subtract(1, 'y').format('YYYY');
 			nextYear = +year + 1 + ''
 
 			this1sp = moment(year + '-09-01', 'YYYY-MM-DD');
@@ -121,7 +120,7 @@
 			prev1sp = moment(year + '-09-01', 'YYYY-MM-DD').subtract(1, 'year');
 			prev1spF = prev1sp.format('WW');
 
-			week = moment().format('WW');
+			week = moment(today).format('WW');
 
 			if (today.isBefore(this1sp)) {
 				var daysInYear = getISOWeeks(+prevYear);
@@ -132,8 +131,6 @@
 				years = year + '/' + nextYear;
 				curWeek = week - this1spF;
 			}
-
-			console.log('curWeek', curWeek);
 
 			if (curWeek > maxWeek) {
 				chetnaya = false
@@ -148,6 +145,7 @@
 		var _w = document.getElementById('week');
 		var _d = document.getElementById('date');
 		var _r = document.getElementById('red');
+		var _r2 = document.getElementById('red2');
 		var _wEW = document.getElementById('warnEndWeek');
 		var _wEWz = document.getElementById('warnEndWeekZ');
 		var _y = document.getElementById('years');
@@ -160,14 +158,15 @@
 			console.log('today', today.format('e'));
 
 			_y.innerHTML = years;
-			_w.innerHTML = moment().format('WW');
-			_d.innerHTML = moment().format('MMMM Do YYYY, HH:mm:ss');
+			_w.innerHTML = moment(today).format('WW');
+			_d.innerHTML = moment(today).format('dddd, D MMMM YYYY, HH:mm a');
 			_r.style.display = (chetnaya) ? 'none' : '';
+			_r2.style.display = (!chetnaya) ? 'none' : '';
 			_wEW.style.display = (+today.format('e') < 6) ? 'none' : '';
 			_wEWz.style.display = (+today.format('e') < 6) ? 'none' : '';
 			_stw.innerHTML = (curWeek > maxWeek) ? '' : '#' + curWeek;
 
-			_sep1.style.display = (curWeek > maxWeek || curWeek < 4) ? 'block' : 'none';
+			_sep1.style.display = (curWeek > maxWeek || curWeek < 2) ? 'block' : 'none';
 		}
 
 		updateHTML();
