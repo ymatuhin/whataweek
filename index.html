@@ -110,7 +110,8 @@
 		var today, year, week, prevYear, nextYear, this1sp, this1spF, prev1sp, prev1spF, chetnaya;
 
 		function update() {
-			today = moment().add(11, 'd')
+			debugger
+			today = moment();
 			year = moment(today).format('YYYY')
 			prevYear = moment(today).subtract(1, 'y').format('YYYY');
 			nextYear = +year + 1 + ''
@@ -129,7 +130,7 @@
 
 			} else {
 				years = year + '/' + nextYear;
-				curWeek = week - this1spF;
+				curWeek = week - this1spF + 1;
 			}
 
 			if (curWeek > maxWeek) {
@@ -137,7 +138,7 @@
 				return
 			}
 
-			chetnaya = !!(curWeek % 2);
+			chetnaya = !(curWeek % 2);
 		}
 
 		update();
