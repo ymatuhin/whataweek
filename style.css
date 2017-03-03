@@ -20,3 +20,7 @@ a:link:hover,a:visited:hover {
 .red {
     color: #f41224;
 }
+
+.adsbygoogle {
+    max-width: 728px !important;
+}
