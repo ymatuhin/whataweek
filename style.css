@@ -1,26 +1,26 @@
 a:link {
-    color: #0089ff;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,137,255,.3);
-    -webkit-transition: color .3s ease,border-color .3s ease;
-    transition: color .3s ease,border-color .3s ease
+  border-bottom: 1px solid rgba(0, 137, 255, 0.3);
+  color: #0089ff;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease, border-color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 a:visited {
-    color: #b40eb4;
-    border-color: rgba(180,14,180,.3)
+  border-color: rgba(180, 14, 180, 0.3);
+  color: #b40eb4;
 }
 
-a:link:hover,a:visited:hover {
-    color: #f41224;
-    border-color: rgba(244,18,36,.3)
+a:link:hover,
+a:visited:hover {
+  border-color: rgba(244, 18, 36, 0.3);
+  color: #f41224;
 }
-
 
 .red {
-    color: #f41224;
+  color: #f41224;
 }
 
 .adsbygoogle {
-    max-width: 728px !important;
+  max-width: 728px !important;
 }
