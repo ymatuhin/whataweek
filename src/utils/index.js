@@ -1,7 +1,12 @@
 export { getDay } from './getDay';
 export { isEven } from './isEven';
-export { beautyDate } from './beautyDate';
-export { getStudyWeek } from './getStudyWeek';
+export { getStudyWeekNumber } from './getStudyWeekNumber';
 export { getNextMonday } from './getNextMonday';
-export { beautyWeekDay } from './beautyWeekDay';
 export { getStudyYearStartDate } from './getStudyYearStartDate';
+export { getWeekRange } from './getWeekRange';
+export { getNextWeekRange } from './getNextWeekRange';
+export { getNextStudyYearStartDate } from './getNextStudyYearStartDate';
+export { getNextSunday } from './getNextSunday';
+export { beautyRange } from './beautyRange';
+export { beautyUntill } from './beautyUntill';
+export { beautyDate } from './beautyDate';

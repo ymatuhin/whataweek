@@ -3,8 +3,10 @@
     "start": "run-p build server",
     "dev": "run-p server watch",
     "server": "live-server ./dist",
+    "prebuild": "rm -rf ./dist/*",
     "build": "run-p build:*",
-    "build:html": "html-minifier --collapse-whitespace ./src/index.html -o dist/index.html",
+    "build:html":
+      "html-minifier --collapse-whitespace ./src/index.html -o dist/index.html",
     "build:js": "webpack --mode production",
     "build:css": "postcss ./src/index.css > ./dist/index.css",
     "build:static": "cp -r ./static/* ./dist",

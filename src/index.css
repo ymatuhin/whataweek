@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 64px 32px;
+  padding: 32px;
+  color: rgba(0, 0, 0, 0.84);
   font: 18px/1.333333 'Roboto', sans-serif;
 }
 
@@ -31,9 +32,13 @@ h2 {
   line-height: 1;
 }
 
+.blocks {
+  margin: 48px 0;
+}
+
 .block {
   display: inline-block;
-  margin: 2em 32px 3em 0;
+  margin: 0 2em 2em 0;
   vertical-align: top;
   line-height: 1;
 }
@@ -48,7 +53,7 @@ h2 {
   display: flex;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 42px;
+  font-size: 48px;
 }
 .red {
   color: #bd3430;
@@ -82,7 +87,7 @@ footer p {
 }
 
 .adsbygoogle {
-  margin: 32px 0;
+  margin-bottom: 32px;
 }
 
 @media (max-width: 768px) {

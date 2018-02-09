@@ -1,8 +1,17 @@
 import { store } from './store';
 import { renderer } from './renderer';
-import { isEven, getDay, getStudyWeek, beautyDate } from './utils';
-
-const maxStudyWeeks = 46;
+import {
+  isEven,
+  getDay,
+  getStudyWeekNumber,
+  getWeekRange,
+  getNextWeekRange,
+  getNextStudyYearStartDate,
+  getNextSunday,
+  beautyRange,
+  beautyUntill,
+  beautyDate,
+} from './utils';
 
 class App {
   constructor($el) {
@@ -17,28 +26,44 @@ class App {
 
   update() {
     const now = new Date();
-    const studyWeek = getStudyWeek(now);
-    const isVacation = studyWeek > maxStudyWeeks;
-    const isEndOfWeek = getDay(now) >= 5;
+    const type = this.getType(now);
+    const studyWeek = getStudyWeekNumber(now);
 
-    const type = isVacation ? 'vacation' : isEndOfWeek ? 'weekend' : 'default';
     store.setType(type);
+    store.setToday(beautyDate(now));
+    if (type === 'vacation') this.updateVacation(now);
+    if (type === 'weekend') this.updateWeekend(now);
+    if (type === 'default') this.updateDefault(now);
+  }
+
+  updateDefault(date) {
+    const studyWeek = getStudyWeekNumber(date);
     store.update('isEven', isEven(studyWeek));
-    store.update('range', beautyDate(now));
+    store.update('range', beautyRange(getWeekRange(date)));
+  }
+
+  updateWeekend(date) {
+    const studyWeek = getStudyWeekNumber(date);
+    store.update('isEven', isEven(studyWeek));
+    store.update('range', beautyRange(getWeekRange(date)));
+    store.update('nextRange', beautyRange(getNextWeekRange(date)));
+  }
+
+  updateVacation(date) {
+    const newYearDate = getNextStudyYearStartDate(date);
+    const weekEnd = getNextSunday(newYearDate);
+    store.update('vacationRange', beautyUntill(newYearDate));
+    store.update('studyRange', beautyRange([newYearDate, weekEnd]));
+  }
+
+  getType(date) {
+    const maxStudyWeeks = 46;
+    const studyWeek = getStudyWeekNumber(date);
+    const isEndOfWeek = getDay(date) >= 5;
+    const isVacation = studyWeek > maxStudyWeeks;
+    const type = isVacation ? 'vacation' : isEndOfWeek ? 'weekend' : 'default';
+    return type;
   }
 }
-
-// Первый учебный день в этом году, в том году и в следующем году.
-// Номер текущей недели
-// if default
-//   Четность
-//   range
-//   nextRange
-// if vacation
-//   vacationRange: from 46 till next study week
-//   studyRange: from first study week till second
-// if weekend
-//   range: start of week to end of week
-//   nextRange: next week range
 
 new App(document.querySelector('.js-blocks'));

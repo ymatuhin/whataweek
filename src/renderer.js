@@ -17,8 +17,8 @@ const renderBlock = (date, isEven) => {
 };
 
 let prevHtml = '';
-export const renderer = $el => (type, state) => {
-  let html = '';
+export const renderer = $el => ({ type, today }, state) => {
+  let html = `<p>Сегодня <b>${today}</b></p>`;
 
   if (type === 'vacation') {
     html +=

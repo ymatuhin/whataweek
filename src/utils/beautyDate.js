@@ -1,6 +1,8 @@
-import { beautyWeekDay } from './beautyWeekDay';
+import { beautyMonth } from './beautyMonth';
 
-export const beautyDate = now => {
-  const week = beautyWeekDay(now);
-  return `${week}, ${now.toLocaleString('ru')}`;
+export const beautyDate = inputDate => {
+  const date = inputDate.getDate();
+  const month = inputDate.getMonth();
+
+  return `${date} ${beautyMonth(month)}`;
 };
