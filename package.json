@@ -1,12 +1,24 @@
 {
   "scripts": {
     "start": "run-p build server",
-    "dev": "run-p build server watch",
-    "watch": "onchange './src/**,./static/**' -- npm build",
+    "dev": "run-p server watch",
     "server": "live-server ./dist",
-    "build": "./build.sh"
+    "build": "run-p build:*",
+    "build:html": "html-minifier --collapse-whitespace ./src/index.html -o dist/index.html",
+    "build:js": "webpack --mode production",
+    "build:css": "postcss ./src/index.css > ./dist/index.css",
+    "build:static": "cp -r ./static/* ./dist",
+    "watch": "run-p watch:*",
+    "watch:html": "onchange 'src/**/*.{html}' -- npm run build:html",
+    "watch:css": "onchange 'src/**/*.{css}' -- npm run build:css",
+    "watch:static": "onchange 'static/**/*' -- npm run build:static",
+    "watch:js": "webpack --mode development --watch",
+    "test": "jest"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.2.0",
+    "babel-preset-env": "^1.6.1",
     "cssnano": "^3.10.0",
     "cssnano-cli": "^1.0.5",
     "html-minifier": "^3.5.8",
@@ -15,6 +27,7 @@
     "npm-run-all": "^4.1.2",
     "onchange": "^3.3.0",
     "postcss-cli": "^5.0.0",
+    "regenerator-runtime": "^0.11.1",
     "webpack": "^4.0.0-beta.0",
     "webpack-cli": "^2.0.4"
   }

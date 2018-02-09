@@ -1,10 +1,10 @@
 import { getDay } from './getDay';
 
-export const getStudyYearStartDate = now => {
+export const getNextStudyYearStartDate = now => {
   const thisYear = now.getFullYear();
   const currentStudyDate = new Date(thisYear, 8, 1);
-  const prevStudyDate = new Date(thisYear - 1, 8, 1);
-  const studyDate = now < currentStudyDate ? prevStudyDate : currentStudyDate;
+  const nextStudyDate = new Date(thisYear + 1, 8, 1);
+  const studyDate = now < currentStudyDate ? currentStudyDate : nextStudyDate;
 
   if (getDay(studyDate) === 6) {
     const year = studyDate.getFullYear();

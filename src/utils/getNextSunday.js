@@ -1,10 +1,10 @@
 import { getDay } from './getDay';
 
-export const getNextMonday = now => {
+export const getNextSunday = now => {
   const thisYear = now.getFullYear();
   const thisMonth = now.getMonth();
   const date = now.getDate();
   const day = getDay(now);
-  const daysTillNextWeek = 7 - day;
-  return new Date(thisYear, thisMonth, date + daysTillNextWeek);
+  const diff = 6 - day;
+  return new Date(thisYear, thisMonth, date + diff);
 };

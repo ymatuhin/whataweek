@@ -1,56 +1,44 @@
-import { getWeekNumber, getStudyWeek, beautyDate } from './utils';
-const maxStudyWeeks = 45;
+import { store } from './store';
+import { renderer } from './renderer';
+import { isEven, getDay, getStudyWeek, beautyDate } from './utils';
 
-class Interface {
-  constructor() {
-    this.$elems = {
-      date: document.getElementById('date'),
-      weekYear: document.getElementById('weekYear'),
-      weekStudy: document.getElementById('weekStudy'),
-    };
+const maxStudyWeeks = 46;
 
-    this.updateHtml();
-    setInterval(() => this.updateHtml(), 1000);
+class App {
+  constructor($el) {
+    this.$el = $el;
+
+    const render = renderer(this.$el);
+    store.subscribe(render);
+
+    this.update();
+    setInterval(this.update.bind(this), 1000);
   }
-  updateHtml() {
-    const now = new Date();
-    const today = beautyDate(now);
-    const weekYearNumber = getWeekNumber(now);
-    const weekStudyNumber = getStudyWeek(now);
 
-    this.$elems.date.innerText = today;
-    this.$elems.weekYear.innerText = weekYearNumber;
-    this.$elems.weekStudy.innerText = weekStudyNumber;
+  update() {
+    const now = new Date();
+    const studyWeek = getStudyWeek(now);
+    const isVacation = studyWeek > maxStudyWeeks;
+    const isEndOfWeek = getDay(now) >= 5;
+
+    const type = isVacation ? 'vacation' : isEndOfWeek ? 'weekend' : 'default';
+    store.setType(type);
+    store.update('isEven', isEven(studyWeek));
+    store.update('range', beautyDate(now));
   }
 }
 
-new Interface();
+// Первый учебный день в этом году, в том году и в следующем году.
+// Номер текущей недели
+// if default
+//   Четность
+//   range
+//   nextRange
+// if vacation
+//   vacationRange: from 46 till next study week
+//   studyRange: from first study week till second
+// if weekend
+//   range: start of week to end of week
+//   nextRange: next week range
 
-// const update = () => {
-//   const now = new Date();
-
-//   const $date = document.getElementById('date');
-//   $date.innerText = getBeautyToday(now);
-
-//   const $week = document.getElementById('week');
-//   $week.innerText = getWeekNumber(now);
-
-//   const $studyWeek = document.getElementById('st_week');
-//   const studyWeek = getStudyWeek(now);
-//   $studyWeek.innerText = studyWeek;
-
-//   const $red = document.getElementById('red');
-//   const $red2 = document.getElementById('red2');
-//   const isChet = studyWeek % 2 === 0;
-//   $red.style.display = isChet ? 'none' : '';
-//   $red2.style.display = isChet ? '' : 'none';
-
-//   const $endWeek = document.getElementById('warnEndWeek');
-//   $endWeek.style.display = getDay(now) > 4 ? '' : 'none';
-
-//   const $sep1 = document.getElementById('sep1');
-//   $sep1.style.display = studyWeek > 50 ? '' : 'none';
-// };
-
-// update();
-// setInterval(update, 1000);
+new App(document.querySelector('.js-blocks'));
