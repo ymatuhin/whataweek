@@ -87,7 +87,8 @@ footer p {
 }
 
 .adsbygoogle {
-  margin-bottom: 32px;
+  margin: 0 auto 32px;
+  max-width: 800px;
 }
 
 @media (max-width: 768px) {
