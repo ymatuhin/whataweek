@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { colors } from "../styles";
   export let id: string = "";
   export let checked: boolean = false;
 
@@ -12,11 +13,11 @@
     <input
       {id}
       bind:checked
-      class="input absolute inset-0 appearance-none border-2 border-gray-900 dark:border-gray-200"
+      class="input absolute w-full h-full appearance-none border-2 border-gray-900 dark:border-gray-200"
       type="checkbox"
     />
     <svg
-      class="w-full h-full fill-current text-gray-900 dark:text-gray-200"
+      class="w-full h-full fill-current {colors.redText}"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 78 78"
       ><path
@@ -29,7 +30,7 @@
 
 <style>
   svg {
-    padding: 0.3rem;
+    padding: 0.25rem;
     visibility: hidden;
   }
   .input:checked + svg {

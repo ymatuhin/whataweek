@@ -12,7 +12,7 @@
 
 <div class="inline-block leading-none {className}">
   {#if overline}
-    <div class={typo.overline}>{overline}</div>
+    <div class="text-sm {colors.caption}">{overline}</div>
   {/if}
   <div class="uppercase {typo.h2}">
     {#if isVacation}
@@ -23,7 +23,9 @@
   </div>
   {#if underline}
     <small class="flex text-center w-full p-1 {colors.paneBg} {colors.paneText}">
-      <span>{isEven ? "⬇" : "⬆"}</span>
+      {#if isEven !== undefined}
+        <span>{isEven ? "↓" : "↑"}</span>
+      {/if}
       <span class="flex-1">{underline}</span>
     </small>
   {/if}

@@ -37,12 +37,6 @@ module.exports = {
       base: ["Fira Sans", defaultTheme.fontFamily.sans],
       mono: defaultTheme.fontFamily.mono,
     },
-    screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "1024px",
-    },
-    // spacing: {},
     extend: {
       borderWidth: {
         1: "1px",

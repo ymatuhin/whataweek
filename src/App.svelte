@@ -1,21 +1,25 @@
 <script lang="ts">
   import { typo, spaces } from "./styles";
+  import Metrica from "./components/Metrica.svelte";
+  import BaseLayout from "./components/BaseLayout.svelte";
   import WeekInfo from "./components/WeekInfo.svelte";
   import Footer from "./components/Footer.svelte";
   import DarkMode from "./components/DarkMode.svelte";
   import ShareButtons from "./components/ShareButtons.svelte";
 
   let titleIcon = process.env.NODE_ENV === "development" ? "🚧 " : "";
+  let title = `${titleIcon}Чет/нечет: Какая сейчас учебная неделя?`;
+  let description =
+    "Сервис для определения четности учебной недели в вашем учебном заведении онлайн. Четная или нечетная?";
 </script>
 
 <svelte:head>
-  <title>{titleIcon}Чет/нечет: Какая сейчас учебная неделя?</title>
+  <title>{title}</title>
+  <meta name="description" content={description} />
 </svelte:head>
 
-<div
-  class="box-content max-w-2xl children-max-w-xl mx-auto px-4 sm:px-8 py-6 sm:py-8 md:py-12 lg:py-20"
->
-  <main class="">
+<BaseLayout>
+  <main class="children-max-w-xl w-full">
     <DarkMode class="mb-4" />
     <h2 class={typo.overline}>Четная или нечетная</h2>
     <h1 class="{typo.h1} mb-4">Какая сейчас <br /> учебная неделя?</h1>
@@ -39,8 +43,8 @@
     </p>
     <p>
       Если четность на сайте не совпадает с четностью в вашем заведении, включите «альтернативный
-      режим». Браузер запомнит ваш выбор и при следующем посещеннии, с того-же браузера, вам не
-      нужно будет включать его еще раз.
+      режим». Браузер запомнит ваш выбор и при следующем посещении, с того-же браузера, вам не нужно
+      будет включать его еще раз.
     </p>
     <br />
   </main>
@@ -49,5 +53,6 @@
     <h2 class="{typo.overline} {spaces.section} mb-2">Поделиться</h2>
     <ShareButtons />
     <Footer class={spaces.section} />
+    <Metrica />
   </aside>
-</div>
+</BaseLayout>

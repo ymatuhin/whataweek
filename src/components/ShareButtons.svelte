@@ -36,7 +36,7 @@
   ];
 </script>
 
-<div class="inline-flex">
+<div class="inline-flex flex-wrap">
   {#each services as service}
     <a
       class="w-8 h-8 p-1 box-content transform hover:scale-125"

@@ -18,7 +18,7 @@
 
 <div class="flex flex-wrap -mb-8 {className}">
   {#if $type === "default"}
-    <Block class={blockClass} overline="Сейчас" underline={$formatted.range} isEven={isEvenFinal} />
+    <Block class={blockClass} underline={$formatted.range} isEven={isEvenFinal} />
   {/if}
 
   {#if $type === "weekend"}
@@ -45,6 +45,6 @@
 <div class="{typo.overline} {spaces.headingSection}">Настройки</div>
 
 <Checkbox bind:checked={invert}>
-  <p>альтернативный режим</p>
+  <p class="leading-none mt-1 pb-1">альтернативный режим</p>
   <p class={typo.caption}>включите если четность не совпадает для вашего заведения</p>
 </Checkbox>

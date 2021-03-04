@@ -14,7 +14,9 @@
     <span class="text-xs">(версия {version})</span>
   </p>
   <p>
-    Cделал c любовью <a href="https://ymatuhin.ru" class={typo.link}>Юрий Матюхин</a>, эл. почта
-    <a href="mailto:ym@ymatuhin.ru" class={typo.link}>ym@ymatuhin.ru</a>
+    Сделал с любовью <a href="https://ymatuhin.ru" class={typo.link}>Юрий Матюхин</a>, эл. почта
+    <a href="mailto:ym@ymatuhin.ru?subject=Какая сейчас учебная неделя" class={typo.link}
+      >ym@ymatuhin.ru</a
+    >
   </p>
 </footer>

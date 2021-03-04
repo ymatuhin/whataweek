@@ -7,11 +7,13 @@
     "prerender": "react-snap",
     "preview": "npm run build && npm run prerender && npm run serve",
     "serve": "vite preview",
-    "deploy": "git subtree push --prefix dist origin test"
+    "deploy": "git subtree push --prefix dist origin master"
   },
   "reactSnap": {
     "source": "dist",
-    "inlineCss": true
+    "inlineCss": true,
+    "minifyCss": true,
+    "preconnectThirdParty": false
   },
   "browserslist": [
     "defaults"
