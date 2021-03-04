@@ -1,21 +1,13 @@
 <script lang="ts">
   import type { IAds } from "./index";
   import { onMount } from "svelte";
-  import { loadScriptOnce } from "./loadScript";
   export let type: IAds = "google";
 
   onMount(() => {
     const isPrerender = navigator.userAgent == "ReactSnap";
-
-    if (!isPrerender) {
-      // @ts-ignore
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    }
-
-    if (type === "google" && !isPrerender) {
-      const src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-      loadScriptOnce(src, { defer: true });
-    }
+    if (isPrerender) return;
+    // @ts-ignore
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
   });
 
   let className = "";
