@@ -1,1 +1,1 @@
-export type IAds = "google" | "yandex";
+export type IAds = "google" | "yandex" | void;

@@ -2,8 +2,8 @@
   import type { IAds } from "../features/ads";
   import Ads from "../features/ads/Ads.svelte";
 
-  type AdsTypes = [IAds, IAds, IAds];
-  export let adsTypes: AdsTypes = ["google", "google", "google"];
+  type AdsTypes = IAds[];
+  export let adsTypes: AdsTypes = [];
 </script>
 
 <div class="top-space / m-4 sm:mx-6 2xl:mx-4"><Ads type={adsTypes[0]} /></div>
