@@ -19,7 +19,7 @@
 </svelte:head>
 
 <BaseLayout>
-  <main class="children-max-w-xl w-full">
+  <main class="limit-children w-full">
     <DarkMode class="mb-4" />
     <h2 class={typo.overline}>Четная или нечетная</h2>
     <h1 class="{typo.h1} mb-4">Какая сейчас <br /> учебная неделя?</h1>
@@ -56,3 +56,9 @@
     <Metrica />
   </aside>
 </BaseLayout>
+
+<style lang="postcss">
+  .limit-children > * {
+    max-width: theme("maxWidth.xl");
+  }
+</style>

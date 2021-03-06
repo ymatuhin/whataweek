@@ -9,7 +9,7 @@ const isProd = process.env.NODE_ENV === "production";
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 30001,
+    port: 1010,
   },
   plugins: [
     svelte({

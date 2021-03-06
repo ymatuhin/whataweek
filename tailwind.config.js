@@ -1,19 +1,9 @@
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
 
 // tailwind.config.js
 module.exports = {
-  purge: {
-    content: ["./index.html", "./src/**/*.{svelte,ts,js,html}"],
-    mode: "all",
-    preserveHtmlElements: false,
-    options: {
-      variables: true,
-      keyframes: true,
-    },
-  },
-  darkMode: "class", // or 'media' or 'class'
+  presets: [require("@ymatuhin/ui/tailwind.config")],
   theme: {
     colors: {
       black: "#000",
@@ -37,27 +27,5 @@ module.exports = {
       base: ["Fira Sans", defaultTheme.fontFamily.sans],
       mono: defaultTheme.fontFamily.mono,
     },
-    extend: {
-      borderWidth: {
-        1: "1px",
-        10: "10px",
-        12: "12px",
-      },
-    },
   },
-  variants: {
-    extend: {
-      textColor: ["visited"],
-    },
-  },
-  plugins: [
-    plugin(function ({ addUtilities, theme }) {
-      const maxWidth = theme("maxWidth", {});
-      const utilities = Object.entries(maxWidth).reduce((acc, [key, value]) => {
-        acc[`.children-max-w-${key} > *`] = { maxWidth: value };
-        return acc;
-      }, {});
-      addUtilities(utilities, { variants: ["responsive"] });
-    }),
-  ],
 };
