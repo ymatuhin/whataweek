@@ -55,9 +55,6 @@
     <h2 class="typo-overline space-section mb-2">Поделиться</h2>
     <ShareButtons />
 
-    <h3 class="typo-overline space-section mb-2">Комментарии</h3>
-    <Comments />
-
     <Footer
       class="space-section"
       title="Чет/нечет: Какая сейчас учебная неделя"
