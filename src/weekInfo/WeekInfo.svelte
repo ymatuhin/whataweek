@@ -1,24 +1,18 @@
 <script lang="ts">
-  import { colors, typo, spaces } from "../styles";
-  import { storeLense } from "@ymatuhin/store-lense";
-  import { type, formatted, isEven } from "../model";
-  import Checkbox from "./Сheckbox.svelte";
+  import { Checkbox } from "shared/ui/features";
+
+  import { type, formatted, isEven, inverted } from "./model";
   import Block from "./Block.svelte";
 
   export let className: string = "";
   export { className as class };
 
-  const invertedLense = storeLense("inverted");
-  let invert = invertedLense.get() || false;
   const blockClass = "flex-initial mr-8 mb-8";
-
-  $: isEvenFinal = invert ? !$isEven : $isEven;
-  $: invertedLense.set(invert);
 </script>
 
 <div class="flex flex-wrap -mb-8 {className}">
   {#if $type === "default"}
-    <Block class={blockClass} underline={$formatted.range} isEven={isEvenFinal} />
+    <Block class={blockClass} underline={$formatted.range} isEven={$isEven} />
   {/if}
 
   {#if $type === "weekend"}
@@ -26,13 +20,13 @@
       class={blockClass}
       overline="Заканчивается"
       underline={$formatted.range}
-      isEven={isEvenFinal}
+      isEven={$isEven}
     />
     <Block
       class={blockClass}
       overline="Начинается"
       underline={$formatted.nextRange}
-      isEven={!isEvenFinal}
+      isEven={!$isEven}
     />
   {/if}
 
@@ -42,9 +36,9 @@
   {/if}
 </div>
 
-<div class="{typo.overline} {spaces.headingSection}">Настройки</div>
+<div class="typo-overline space-heading-section">Настройки</div>
 
-<Checkbox bind:checked={invert}>
+<Checkbox bind:checked={$inverted}>
   <p class="leading-none mt-1 pb-1">альтернативный режим</p>
-  <p class={typo.caption}>включите если четность не совпадает для вашего заведения</p>
+  <p class="typo-caption">включите если четность не совпадает для вашего заведения</p>
 </Checkbox>

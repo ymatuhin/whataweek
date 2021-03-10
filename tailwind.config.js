@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 // tailwind.config.js
 module.exports = {
-  presets: [require("@ymatuhin/ui/tailwind.config")],
+  presets: [require("shared/ui/tailwind.preset")],
   theme: {
     colors: {
       black: "#000",

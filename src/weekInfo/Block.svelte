@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { typo, colors } from "../styles";
-
   export let isEven: boolean;
   export let overline: string = "";
   export let underline: string = "";
@@ -12,17 +10,17 @@
 
 <div class="inline-block leading-none {className}">
   {#if overline}
-    <div class="text-sm {colors.caption}">{overline}</div>
+    <div class="text-sm color-caption">{overline}</div>
   {/if}
-  <div class="uppercase {typo.h2}">
+  <div class="uppercase typo-h2">
     {#if isVacation}
       отдых
     {:else}
-      {#if !isEven}<span class={colors.redText}>Нe</span>{/if}четная
+      {#if !isEven}<span class="color-red-text">Нe</span>{/if}четная
     {/if}
   </div>
   {#if underline}
-    <small class="flex text-center w-full p-1 {colors.paneBg} {colors.paneText}">
+    <small class="flex text-center w-full p-1 color-pane-bg color-pane-text">
       {#if isEven !== undefined}
         <span>{isEven ? "↓" : "↑"}</span>
       {/if}

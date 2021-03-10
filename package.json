@@ -1,6 +1,6 @@
 {
   "name": "whataweek",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "dev": "vite",
     "build": "vite build --outDir dist",
@@ -11,36 +11,32 @@
   },
   "reactSnap": {
     "source": "dist",
+    "skipThirdPartyRequests": true,
     "inlineCss": true,
-    "minifyCss": true,
-    "preconnectThirdParty": false
+    "minifyCss": true
   },
   "browserslist": [
     "defaults"
   ],
   "devDependencies": {
     "@tsconfig/svelte": "^1.0.10",
-    "@types/node": "^14.14.31",
+    "@types/node": "^14.14.33",
     "@vitejs/plugin-legacy": "^1.3.1",
-    "autoprefixer": "^10.2.4",
+    "@ymatuhin/debug": "^0.0.10",
+    "autoprefixer": "^10.2.5",
     "critical": "^2.0.6",
     "nano-css": "^5.3.1",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.8",
     "postcss-load-config": "^3.0.1",
     "react-snap": "^1.23.0",
     "rollup-plugin-svelte": "^7.1.0",
-    "stylelint": "^13.11.0",
-    "stylelint-config-standard": "^20.0.0",
-    "svelte": "^3.32.3",
+    "svelte": "^3.35.0",
     "svelte-preprocess": "^4.6.9",
     "tailwindcss": "^2.0.3",
-    "typescript": "^4.1.3",
-    "vite": "^2.0.1"
+    "typescript": "^4.2.3",
+    "vite": "^2.0.5"
   },
   "dependencies": {
-    "@ymatuhin/storage": "link:../npm/@storeLense",
-    "@ymatuhin/store-lense": "link:../npm/@storeLense",
-    "@ymatuhin/ui": "link:../npm/@ui",
-    "storent": "link:../npm/storent"
+    "shared": "link:../shared"
   }
 }

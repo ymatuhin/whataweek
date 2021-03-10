@@ -1,1 +1,1 @@
-/// <reference path="node_modules/@ymatuhin/ui/types.d.ts" />
+/// <reference path="node_modules/shared/types.d.ts" />

@@ -1,11 +1,14 @@
 <script lang="ts">
-  import { typo, spaces } from "./styles";
-  import Metrica from "./components/Metrica.svelte";
-  import BaseLayout from "./components/BaseLayout.svelte";
-  import WeekInfo from "./components/WeekInfo.svelte";
-  import Footer from "./components/Footer.svelte";
-  import DarkMode from "./components/DarkMode.svelte";
-  import ShareButtons from "./components/ShareButtons.svelte";
+  import { version } from "../package.json";
+  import {
+    DarkMode,
+    BaseLayout,
+    Metrica,
+    Footer,
+    ShareButtons,
+    Comments,
+  } from "shared/ui/features";
+  import WeekInfo from "./weekInfo/WeekInfo.svelte";
 
   let titleIcon = process.env.NODE_ENV === "development" ? "🚧 " : "";
   let title = `${titleIcon}Чет/нечет: Какая сейчас учебная неделя?`;
@@ -21,17 +24,17 @@
 <BaseLayout>
   <main class="limit-children w-full">
     <DarkMode class="mb-4" />
-    <h2 class={typo.overline}>Четная или нечетная</h2>
-    <h1 class="{typo.h1} mb-4">Какая сейчас <br /> учебная неделя?</h1>
+    <h2 class="typo-overline">Четная или нечетная</h2>
+    <h1 class="typo-h1 mb-4">Какая сейчас <br /> учебная неделя?</h1>
 
     <p class="text-lg">
       Во многих учебных заведениях занятия чередуются раз в 2 недели, для этого придумали чередовать
       учебные недели и называть их «четная» и «нечетная» соответственно.
     </p>
 
-    <WeekInfo class={spaces.section} />
+    <WeekInfo class="space-section" />
 
-    <h2 class="{typo.h3} {spaces.headingSection}">Как определятся четность</h2>
+    <h2 class="typo-h3 space-heading-section">Как определятся четность</h2>
 
     <p class="mb-3">
       Четность учебной недели считается особым образом. Общепринято считать, что первая учебная
@@ -46,13 +49,21 @@
       режим». Браузер запомнит ваш выбор и при следующем посещении, с того-же браузера, вам не нужно
       будет включать его еще раз.
     </p>
-    <br />
   </main>
 
   <aside>
-    <h2 class="{typo.overline} {spaces.section} mb-2">Поделиться</h2>
+    <h2 class="typo-overline space-section mb-2">Поделиться</h2>
     <ShareButtons />
-    <Footer class={spaces.section} />
+
+    <h3 class="typo-overline space-section mb-2">Комментарии</h3>
+    <Comments />
+
+    <Footer
+      class="space-section"
+      title="Чет/нечет: Какая сейчас учебная неделя"
+      from="2015"
+      {version}
+    />
     <Metrica />
   </aside>
 </BaseLayout>
