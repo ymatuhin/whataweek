@@ -6,12 +6,11 @@
     Metrica,
     Footer,
     ShareButtons,
-    Comments,
+    Favicons,
   } from "shared/ui/features";
   import WeekInfo from "./weekInfo/WeekInfo.svelte";
 
-  let titleIcon = process.env.NODE_ENV === "development" ? "🚧 " : "";
-  let title = `${titleIcon}Чет/нечет: Какая сейчас учебная неделя?`;
+  let title = `Чет/нечет: Какая сейчас учебная неделя?`;
   let description =
     "Сервис для определения четности учебной недели в вашем учебном заведении онлайн. Четная или нечетная?";
 </script>
@@ -19,13 +18,14 @@
 <svelte:head>
   <title>{title}</title>
   <meta name="description" content={description} />
+  <Favicons />
 </svelte:head>
 
 <BaseLayout>
-  <main class="limit-children w-full">
+  <main class="w-full limit-children">
     <DarkMode class="mb-4" />
     <h2 class="typo-overline">Четная или нечетная</h2>
-    <h1 class="typo-h1 mb-4">Какая сейчас <br /> учебная неделя?</h1>
+    <h1 class="mb-4 typo-h1">Какая сейчас <br /> учебная неделя?</h1>
 
     <p class="text-lg">
       Во многих учебных заведениях занятия чередуются раз в 2 недели, для этого придумали чередовать
@@ -52,7 +52,7 @@
   </main>
 
   <aside>
-    <h2 class="typo-overline space-section mb-2">Поделиться</h2>
+    <h2 class="mb-2 typo-overline space-section">Поделиться</h2>
     <ShareButtons />
 
     <Footer

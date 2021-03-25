@@ -39,6 +39,6 @@
 <div class="typo-overline space-heading-section">Настройки</div>
 
 <Checkbox bind:checked={$inverted}>
-  <p class="leading-none mt-1 pb-1">альтернативный режим</p>
+  <p class="pb-1 mt-1 leading-none">альтернативный режим</p>
   <p class="typo-caption">включите если четность не совпадает для вашего заведения</p>
 </Checkbox>

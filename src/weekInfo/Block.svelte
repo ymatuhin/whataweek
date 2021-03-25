@@ -16,11 +16,11 @@
     {#if isVacation}
       отдых
     {:else}
-      {#if !isEven}<span class="color-red-text">Нe</span>{/if}четная
+      {#if !isEven}<span class="color-primary-text">Нe</span>{/if}четная
     {/if}
   </div>
   {#if underline}
-    <small class="flex text-center w-full p-1 color-pane-bg color-pane-text">
+    <small class="flex w-full p-1 text-center color-pane-bg color-pane-text">
       {#if isEven !== undefined}
         <span>{isEven ? "↓" : "↑"}</span>
       {/if}
