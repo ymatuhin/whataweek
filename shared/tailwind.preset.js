@@ -1,14 +1,10 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  // mode: "jit",
+  mode: "jit",
   darkMode: "class",
   purge: {
-    content: [
-      "./index.html",
-      "src/**/*.{svelte,ts,js,html}",
-      "node_modules/shared/**/*.{svelte,ts,js,html}",
-    ],
+    content: ["./index.html", "{src,shared}/**/*.{svelte,ts,js,html}"],
     mode: "all",
   },
   theme: {
