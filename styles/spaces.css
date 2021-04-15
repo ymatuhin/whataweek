@@ -1,0 +1,11 @@
+@layer base {
+  .space-heading {
+    @apply mb-4 mt-12;
+  }
+  .space-section {
+    @apply mt-12 sm:mt-14 md:mt-16;
+  }
+  .space-heading-section {
+    @apply mt-12 sm:mt-14 md:mt-16 mb-4;
+  }
+}

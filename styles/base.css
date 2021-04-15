@@ -1,0 +1,29 @@
+@layer base {
+  html {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  @screen md {
+    html {
+      font-size: 20px;
+    }
+  }
+
+  b,
+  strong {
+    @apply text-contrast;
+  }
+
+  a {
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+
+    @apply bg-gray-300 dark:bg-gray-700 transition-colors;
+  }
+}

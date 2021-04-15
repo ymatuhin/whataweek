@@ -1,0 +1,17 @@
+@layer base {
+  .focus-outline {
+    @apply focus:outline-none focus:ring focus:ring-offset-0 focus:ring-primary-700 focus:ring-opacity-30 dark:focus:ring-primary-500 dark:focus:ring-opacity-30;
+  }
+  .focus-within-outline {
+    @apply focus-within:outline-none focus-within:ring focus-within:ring-offset-0 focus-within:ring-primary-700 focus-within:ring-opacity-30 dark:focus-within:ring-primary-500 dark:focus-within:ring-opacity-30;
+  }
+
+  @variants dark {
+    .filter-none {
+      filter: none;
+    }
+    .filter-invert {
+      filter: invert(100%);
+    }
+  }
+}
