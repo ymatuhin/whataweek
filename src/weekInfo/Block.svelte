@@ -8,23 +8,23 @@
   export { className as class };
 </script>
 
-<div class="inline-block leading-none {className}">
+<div class="pane py-3 px-5 inline-block leading-none {className}">
   {#if overline}
-    <div class="text-sm color-caption">{overline}</div>
+    <div class="text-sm">{overline}</div>
   {/if}
-  <div class="uppercase typo-h2">
+  <div class="text-center uppercase typo-h2">
     {#if isVacation}
       отдых
     {:else}
-      {#if !isEven}<span class="color-primary-text">Нe</span>{/if}четная
+      {#if !isEven}<span class="text-brand">Нe</span>{/if}четная
     {/if}
   </div>
   {#if underline}
-    <small class="flex w-full p-1 text-center color-pane-bg color-pane-text">
+    <small class="flex w-full text-center bg-pane text-pale">
+      <span class="mr-2">{underline}</span>
       {#if isEven !== undefined}
-        <span>{isEven ? "↓" : "↑"}</span>
+        <span class="ml-auto">{isEven ? "нижняя" : "верхняя"}</span>
       {/if}
-      <span class="flex-1">{underline}</span>
     </small>
   {/if}
 </div>

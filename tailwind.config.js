@@ -1,9 +1,9 @@
 const colors = require("tailwindcss/colors");
-const defaultTheme = require("tailwindcss/defaultTheme");
+const preset = require("shared/tailwind.preset");
 
 // tailwind.config.js
 module.exports = {
-  presets: [require("shared/ui/tailwind.preset")],
+  presets: [preset],
   theme: {
     colors: {
       black: "#000",
@@ -21,11 +21,6 @@ module.exports = {
         800: "#ab212a",
         900: "#881b24",
       },
-    },
-    fontFamily: {
-      heading: ["Fira Sans Condensed", defaultTheme.fontFamily.sans],
-      base: ["Fira Sans", defaultTheme.fontFamily.sans],
-      mono: defaultTheme.fontFamily.mono,
     },
   },
 };

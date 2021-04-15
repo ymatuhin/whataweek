@@ -36,9 +36,7 @@
   {/if}
 </div>
 
-<div class="typo-overline space-heading-section">Настройки</div>
-
-<Checkbox bind:checked={$inverted}>
+<Checkbox class="mt-8" bind:checked={$inverted}>
   <p class="pb-1 mt-1 leading-none">альтернативный режим</p>
-  <p class="typo-caption">включите если четность не совпадает для вашего заведения</p>
+  <p class="text-sm text-pale">если четность не совпадает c вашим учебным заведением</p>
 </Checkbox>
