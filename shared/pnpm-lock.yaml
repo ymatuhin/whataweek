@@ -1,0 +1,89 @@
+dependencies:
+  flatry: 1.0.12
+  lodash: 4.17.21
+  modern-normalize: 1.0.0
+  raf-throttle: 2.0.5
+  storage-available: 1.1.0
+devDependencies:
+  '@tailwindcss/forms': 0.3.2
+  '@tsconfig/svelte': 1.0.10
+  '@types/lodash': 4.14.168
+  '@types/node': 14.14.33
+  '@ymatuhin/debug': 0.0.10
+  svelte: 3.35.0
+lockfileVersion: 5.2
+packages:
+  /@tailwindcss/forms/0.3.2:
+    dependencies:
+      mini-svg-data-uri: 1.2.3
+    dev: true
+    peerDependencies:
+      tailwindcss: '>=2.0.0'
+    resolution:
+      integrity: sha512-aj2/rJsGb2whAZ/BQWHWWQRSbhH0r/l1ozOByiv+ZNjBD84GMvb5dhAyfpeasFky+EJrAwX5eaqft8NQMZFWvA==
+  /@tsconfig/svelte/1.0.10:
+    dev: true
+    resolution:
+      integrity: sha512-EBrpH2iXXfaf/9z81koiDYkp2mlwW2XzFcAqn6qh7VKyP8zBvHHAQzNhY+W9vH5arAjmGAm5g8ElWq6YmXm3ig==
+  /@types/lodash/4.14.168:
+    dev: true
+    resolution:
+      integrity: sha512-oVfRvqHV/V6D1yifJbVRU3TMp8OT6o6BG+U9MkwuJ3U8/CsDHvalRpsxBqivn71ztOFZBTfJMvETbqHiaNSj7Q==
+  /@types/node/14.14.33:
+    dev: true
+    resolution:
+      integrity: sha512-oJqcTrgPUF29oUP8AsUqbXGJNuPutsetaa9kTQAQce5Lx5dTYWV02ScBiT/k1BX/Z7pKeqedmvp39Wu4zR7N7g==
+  /@ymatuhin/debug/0.0.10:
+    dev: true
+    resolution:
+      integrity: sha512-U2Qc+KxaMnqGZ+Zbh6MGekKbcoXFCVoOVXDmucR24DsXJBcTW/dMdvr2UOkSF2cEsiVvsbeoH9szDj5qVryJyg==
+  /flatry/1.0.12:
+    dependencies:
+      is-promise: 2.2.2
+    dev: false
+    resolution:
+      integrity: sha1-Jg3AxBQlgF/phO1W3QS+7omieeI=
+  /is-promise/2.2.2:
+    dev: false
+    resolution:
+      integrity: sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==
+  /lodash/4.17.21:
+    dev: false
+    resolution:
+      integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+  /mini-svg-data-uri/1.2.3:
+    dev: true
+    resolution:
+      integrity: sha512-zd6KCAyXgmq6FV1mR10oKXYtvmA9vRoB6xPSTUJTbFApCtkefDnYueVR1gkof3KcdLZo1Y8mjF2DFmQMIxsHNQ==
+  /modern-normalize/1.0.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-1lM+BMLGuDfsdwf3rsgBSrxJwAZHFIrQ8YR61xIqdHo0uNKI9M52wNpHSrliZATJp51On6JD0AfRxd4YGSU0lw==
+  /raf-throttle/2.0.5:
+    dev: false
+    resolution:
+      integrity: sha512-0cRR3glc9bvdTW+mgw/DoSXkK7bnLZlWC+RtD3mubJhDSWKjPO5o2j/i7nOvIfmvAKgRtKPSwQcPI6MvYeDeYw==
+  /storage-available/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-uFHjhmUxyxjEhoEl2sB+ogNWpPoFihk59cfSzPs0wXcCVRtpRti7u3G0O3VEyUuJJIg0oj0g7VGldsNSuhOoqQ==
+  /svelte/3.35.0:
+    dev: true
+    engines:
+      node: '>= 8'
+    resolution:
+      integrity: sha512-gknlZkR2sXheu/X+B7dDImwANVvK1R0QGQLd8CNIfxxGPeXBmePnxfzb6fWwTQRsYQG7lYkZXvpXJvxvpsoB7g==
+specifiers:
+  '@tailwindcss/forms': ^0.3.2
+  '@tsconfig/svelte': ^1.0.10
+  '@types/lodash': ^4.14.168
+  '@types/node': ^14.14.31
+  '@ymatuhin/debug': ^0.0.10
+  flatry: ^1.0.12
+  lodash: ^4.17.21
+  modern-normalize: ^1.0.0
+  raf-throttle: ^2.0.5
+  storage-available: ^1.1.0
+  svelte: ^3.32.3

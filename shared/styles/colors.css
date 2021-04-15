@@ -1,0 +1,26 @@
+@layer base {
+  .text-contrast {
+    @apply text-gray-800 dark:text-gray-100 transition-colors;
+  }
+  .text-neutral {
+    @apply text-gray-700 dark:text-gray-300 transition-colors;
+  }
+  .text-pale {
+    @apply text-gray-500 dark:text-gray-400 transition-colors;
+  }
+  .text-faint {
+    @apply text-gray-400 dark:text-gray-500 transition-colors;
+  }
+  .text-brand {
+    @apply text-primary-700 dark:text-primary-500 transition-colors;
+  }
+}
+
+@layer base {
+  .border-brand {
+    @apply border-primary-700 dark:border-primary-500 transition-colors;
+  }
+  .bg-brand {
+    @apply bg-primary-700 dark:bg-primary-500 transition-colors;
+  }
+}
