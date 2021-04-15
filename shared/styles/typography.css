@@ -14,6 +14,7 @@
   .typo-h4 {
     @apply text-lg md:text-xl lg:text-2xl typo-heading leading-snug;
   }
+  /* 
   .typo-sub-title {
     @apply text-lg font-medium text-contrast;
   }
@@ -22,7 +23,8 @@
   }
   .typo-link {
     @apply text-primary-700 dark:text-primary-500 hover:underline;
-  }
+  } 
+  */
   .typo-overline {
     @apply text-xl text-faint tracking-wide leading-none;
   }

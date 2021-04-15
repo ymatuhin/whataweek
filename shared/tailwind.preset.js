@@ -32,9 +32,18 @@ module.exports = {
       lineHeight: {
         tighter: "1.125",
       },
+      colors: {
+        vk: "#4680c2",
+        telegram: "#64a9dc",
+        facebook: "#3b5998",
+        twitter: "#00aced",
+        viber: "#7b519d",
+        whatsapp: "#65bc54",
+      },
     },
   },
   corePlugins: {
     preflight: false,
   },
+  plugins: [require("tailwindcss-interaction-variants")],
 };

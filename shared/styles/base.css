@@ -1,12 +1,12 @@
 @layer base {
   html {
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 19px;
+    line-height: 1.6;
   }
 
   @screen md {
     html {
-      font-size: 20px;
+      font-size: 21px;
     }
   }
 

@@ -52,6 +52,7 @@ importers:
       raf-throttle: ^2.0.5
       storage-available: ^1.1.0
       svelte: ^3.32.3
+      tailwindcss-interaction-variants: ^5.0.0
     dependencies:
       flatry: 1.0.12
       lodash: 4.17.21
@@ -63,6 +64,7 @@ importers:
       '@types/node': 14.14.41
       '@ymatuhin/debug': 0.0.10
       svelte: 3.37.0
+      tailwindcss-interaction-variants: 5.0.0
 
 packages:
 
@@ -2057,6 +2059,13 @@ packages:
 
   /systemjs/6.8.3:
     resolution: {integrity: sha512-UcTY+FEA1B7e+bpJk1TI+a9Na6LG7wFEqW7ED16cLqLuQfI/9Ri0rsXm3tKlIgNoHyLHZycjdAOijzNbzelgwA==}
+    dev: true
+
+  /tailwindcss-interaction-variants/5.0.0:
+    resolution: {integrity: sha512-Tmx9HjwuNA3G7cLUcebGkNchKkNVIZXBroxa0LBoq/KUb/xEKEM8qugUG7QczSNPhaZzpXmo3IzPkRhf4tDaOQ==}
+    dependencies:
+      lodash: 4.17.21
+      postcss-selector-parser: 6.0.4
     dev: true
 
   /tailwindcss/2.1.1_02ae6d0a5709fa7b5d38be2fad8eebc6:

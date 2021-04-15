@@ -2,10 +2,10 @@
   import { DarkMode } from "./darkMode";
 </script>
 
-<header class="flex items-center mx-[7%] my-12 md:my-16 lg:mx-16">
+<header class="flex items-center mx-[7%] my-10 md:my-16 lg:mx-16">
   <a
     href="/"
-    class="focus-outline w-12 h-12 inline-flex align-top transition transform hover:scale-90"
+    class="inline-flex w-12 h-12 align-top transition transform focus-outline hocus:scale-90"
   >
     <slot name="logo" />
   </a>
