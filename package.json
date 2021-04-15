@@ -36,7 +36,5 @@
     "typescript": "^4.2.4",
     "vite": "^2.1.5"
   },
-  "dependencies": {
-    "shared": "link:../shared"
-  }
+  "dependencies": {}
 }
