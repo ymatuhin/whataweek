@@ -41,7 +41,7 @@ Grouping content
 */
 
 hr {
-  height: 0; /* 1 */
+  /* height: 0; */
   color: inherit; /* 2 */
 }
 

@@ -6,6 +6,12 @@ module.exports = {
   purge: {
     content: ["./index.html", "{src,shared}/**/*.{svelte,ts,js,html}"],
     mode: "all",
+    preserveHtmlElements: false,
+    options: {
+      keyframes: true,
+      variables: true,
+      fontFace: true,
+    },
   },
   theme: {
     fontFamily: {
