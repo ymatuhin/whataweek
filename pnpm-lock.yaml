@@ -11,7 +11,6 @@ importers:
       '@vitejs/plugin-legacy': ^1.3.2
       '@ymatuhin/debug': ^0.0.10
       autoprefixer: ^10.2.5
-      ghooks: ^2.0.4
       nano-css: ^5.3.1
       postcss: ^8.2.10
       postcss-load-config: ^3.0.1
@@ -32,7 +31,6 @@ importers:
       '@vitejs/plugin-legacy': 1.3.2_vite@2.1.5
       '@ymatuhin/debug': 0.0.10
       autoprefixer: 10.2.5_postcss@8.2.10
-      ghooks: 2.0.4
       nano-css: 5.3.1
       postcss: 8.2.10
       postcss-load-config: 3.0.1
@@ -496,29 +494,12 @@ packages:
     resolution: {integrity: sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w==}
     dev: true
 
-  /colors/0.6.2:
-    resolution: {integrity: sha1-JCP+ZnisDF2uiFLl0OW+CMmXq8w=}
-    engines: {node: '>=0.1.90'}
-    dev: true
-
-  /commander/2.1.0:
-    resolution: {integrity: sha1-0SG7roYNmZKj1Re6lvVliOR8Z4E=}
-    engines: {node: '>= 0.6.x'}
-    dev: true
-
   /commander/2.17.1:
     resolution: {integrity: sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==}
     dev: true
 
   /commander/2.19.0:
     resolution: {integrity: sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==}
-    dev: true
-
-  /commander/2.9.0:
-    resolution: {integrity: sha1-nJkJQXbhIkDLItbFFGCYQA/g99Q=}
-    engines: {node: '>= 0.6.x'}
-    dependencies:
-      graceful-readlink: 1.0.1
     dev: true
 
   /commander/6.2.1:
@@ -939,15 +920,6 @@ packages:
       unpipe: 1.0.0
     dev: true
 
-  /findup/0.1.5:
-    resolution: {integrity: sha1-itkpozk7rGJ5V6fl3kYjsGsOLOs=}
-    engines: {node: '>=0.6'}
-    hasBin: true
-    dependencies:
-      colors: 0.6.2
-      commander: 2.1.0
-    dev: true
-
   /flatry/1.0.12:
     resolution: {integrity: sha1-Jg3AxBQlgF/phO1W3QS+7omieeI=}
     dependencies:
@@ -993,18 +965,6 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
 
-  /ghooks/2.0.4:
-    resolution: {integrity: sha1-/VDgQP9UiQauQstReToBv+JFZ7k=}
-    requiresBuild: true
-    dependencies:
-      findup: 0.1.5
-      lodash.clone: 4.5.0
-      manage-path: 2.0.0
-      opt-cli: 1.5.1
-      path-exists: 3.0.0
-      spawn-command: 0.0.2
-    dev: true
-
   /glob-base/0.3.0:
     resolution: {integrity: sha1-27Fk9iIbHAscz4Kuoyi0l98Oo8Q=}
     engines: {node: '>=0.10.0'}
@@ -1039,10 +999,6 @@ packages:
 
   /graceful-fs/4.2.6:
     resolution: {integrity: sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==}
-    dev: true
-
-  /graceful-readlink/1.0.1:
-    resolution: {integrity: sha1-TK+tdrxi8C+gObL5Tpo906ORpyU=}
     dev: true
 
   /has-flag/3.0.0:
@@ -1295,20 +1251,6 @@ packages:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=}
     dev: true
 
-  /lodash._baseclone/4.5.7:
-    resolution: {integrity: sha1-zkKt4IOE711i+nfDD2GkbmhvhDQ=}
-    dev: true
-
-  /lodash.clone/4.3.2:
-    resolution: {integrity: sha1-5WsXa2gjp93jj38r9Y3n1ZcSAOk=}
-    dependencies:
-      lodash._baseclone: 4.5.7
-    dev: true
-
-  /lodash.clone/4.5.0:
-    resolution: {integrity: sha1-GVhwRQ9aExkkeN9Lw9I9LeoZB7Y=}
-    dev: true
-
   /lodash.toarray/4.4.0:
     resolution: {integrity: sha1-JMS/zWsvuji/0FlNsRedjptlZWE=}
     dev: true
@@ -1328,10 +1270,6 @@ packages:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
       sourcemap-codec: 1.4.8
-    dev: true
-
-  /manage-path/2.0.0:
-    resolution: {integrity: sha1-9M+EV7km7u4qg7FzUBQUvHbrlZc=}
     dev: true
 
   /mdn-data/1.1.4:
@@ -1546,16 +1484,6 @@ packages:
       wrappy: 1.0.2
     dev: true
 
-  /opt-cli/1.5.1:
-    resolution: {integrity: sha1-BNtEexPJa5kusxaFJm9O0NlzbcI=}
-    hasBin: true
-    dependencies:
-      commander: 2.9.0
-      lodash.clone: 4.3.2
-      manage-path: 2.0.0
-      spawn-command: 0.0.2-1
-    dev: true
-
   /param-case/2.1.1:
     resolution: {integrity: sha1-35T9jPZTHs915r75oIWPvHK+Ikc=}
     dependencies:
@@ -1598,11 +1526,6 @@ packages:
   /parseurl/1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
     engines: {node: '>= 0.8'}
-    dev: true
-
-  /path-exists/3.0.0:
-    resolution: {integrity: sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=}
-    engines: {node: '>=4'}
     dev: true
 
   /path-is-absolute/1.0.1:
@@ -1997,14 +1920,6 @@ packages:
       es6-promise: 4.2.8
       isomorphic-fetch: 2.2.1
       source-map: 0.6.1
-    dev: true
-
-  /spawn-command/0.0.2:
-    resolution: {integrity: sha1-lUThpDygRfhTGqwaSMspva5iM44=}
-    dev: true
-
-  /spawn-command/0.0.2-1:
-    resolution: {integrity: sha1-YvXpRmmBwbeW3Fkpk34RycaSG9A=}
     dev: true
 
   /stack-generator/2.0.5:
