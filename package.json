@@ -7,7 +7,8 @@
     "prerender": "react-snap",
     "preview": "npm run build && npm run prerender && npm run serve",
     "serve": "vite preview",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "prepare": "husky install"
   },
   "reactSnap": {
     "source": "dist",
@@ -34,7 +35,8 @@
     "svelte-preprocess": "^4.7.0",
     "tailwindcss": "^2.1.1",
     "typescript": "^4.2.4",
-    "vite": "^2.1.5"
+    "vite": "^2.1.5",
+    "husky": "^6.0.0"
   },
   "dependencies": {
     "shared": "file:./shared"

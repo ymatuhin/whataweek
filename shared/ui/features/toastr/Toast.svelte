@@ -23,8 +23,8 @@
 </script>
 
 <div on:click class="relative flex bg-{color}-400 text-{color}-900 w-full text-xs">
-  <div class="px-3 py-3 flex flex-1 items-center">
-    <Icon class="w-6 h-6 flex-shrink-0 mr-3" {type} />
+  <div class="flex items-center flex-1 px-3 py-3">
+    <Icon class="flex-shrink-0 w-6 h-6 mr-3" {type} />
     <div class="flex-1">
       {#if title}
         <p class="font-medium leading-tight">{title}</p>

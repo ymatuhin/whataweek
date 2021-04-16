@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+git subtree pull --prefix=shared git@github.com:ymatuhin/shared.git master --squash
