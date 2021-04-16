@@ -5,13 +5,13 @@
 
   let svgClasses = "absolute inline-block fill-current";
   $: labelClasses = active ? "bg-gray-100" : "bg-gray-900";
-  $: ballClasses = active ? "translate-x-5 bg-gray-900" : "bg-gray-100";
+  $: ballClasses = active ? "translate-x-[27px] bg-gray-900" : "translate-x-[3px] bg-gray-100";
 </script>
 
 <label
-  class="focus-within-outline cursor-pointer transition relative flex items-center box-content w-[50px] h-[26px]  rounded-full {labelClasses} {className} "
+  class="flex items-center focus-within-outline cursor-pointer transition relative  box-content w-[50px] h-[26px] rounded-full {labelClasses} {className} "
 >
-  <div class="transform transition z-10 rounded-full mx-[3px] w-4 h-4 {ballClasses}" />
+  <div class="transform transition rounded-full z-10 w-[20px] h-[20px] {ballClasses}" />
   <svg
     class="{svgClasses} w-[14px] text-gray-100 right-[6px]"
     viewBox="0 0 16 16"
@@ -29,7 +29,7 @@
     />
   </svg>
   <input
-    class="pointer-events-none absolute inset-0 opacity-0"
+    class="absolute inset-0 opacity-0 pointer-events-none"
     type="checkbox"
     bind:checked={active}
   />

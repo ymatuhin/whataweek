@@ -1,14 +1,10 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  // mode: "jit",
+  mode: "jit",
   darkMode: "class",
   purge: {
-    content: [
-      "./index.html",
-      "src/**/*.{svelte,ts,js,html}",
-      "node_modules/shared/**/*.{svelte,ts,js,html}",
-    ],
+    content: ["./index.html", "{src,shared}/**/*.{svelte,ts,js,html}"],
     mode: "all",
   },
   theme: {
@@ -36,9 +32,18 @@ module.exports = {
       lineHeight: {
         tighter: "1.125",
       },
+      colors: {
+        vk: "#4680c2",
+        telegram: "#64a9dc",
+        facebook: "#3b5998",
+        twitter: "#00aced",
+        viber: "#7b519d",
+        whatsapp: "#65bc54",
+      },
     },
   },
   corePlugins: {
     preflight: false,
   },
+  plugins: [require("tailwindcss-interaction-variants")],
 };

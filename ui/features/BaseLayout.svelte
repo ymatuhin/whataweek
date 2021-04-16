@@ -2,7 +2,7 @@
   <div class="justify-end flex-1 hidden mr-4 vertical-space 2xl:flex">
     <slot name="left" />
   </div>
-  <div class="w-full flex-shrink-0 max-w-full lg:max-w-3xl">
+  <div class="flex-shrink-0 w-full max-w-full lg:max-w-3xl">
     <div class="max-w-xl mx-auto">
       <slot />
     </div>

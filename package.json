@@ -10,7 +10,8 @@
     "@types/lodash": "^4.14.168",
     "@types/node": "^14.14.31",
     "@ymatuhin/debug": "^0.0.10",
-    "svelte": "^3.32.3"
+    "svelte": "^3.32.3",
+    "tailwindcss-interaction-variants": "^5.0.0"
   },
   "dependencies": {
     "flatry": "^1.0.12",
