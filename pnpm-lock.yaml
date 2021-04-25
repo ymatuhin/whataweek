@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.6
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.7
       '@tailwindcss/jit': 0.1.8
       '@tsconfig/svelte': ^1.0.10
       '@types/node': ^14.14.41
@@ -12,34 +12,34 @@ importers:
       '@ymatuhin/debug': ^0.0.10
       autoprefixer: ^10.2.5
       nano-css: ^5.3.1
-      postcss: ^8.2.10
+      postcss: ^8.2.12
       postcss-load-config: ^3.0.1
       react-snap: ^1.23.0
       shared: file:./shared
       svelte: ^3.37.0
-      svelte-preprocess: ^4.7.0
-      tailwindcss: ^2.1.1
+      svelte-preprocess: ^4.7.2
+      tailwindcss: ^2.1.2
       typescript: ^4.2.4
-      vite: ^2.1.5
+      vite: ^2.2.2
     dependencies:
       shared: link:shared
     devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.6_svelte@3.37.0+vite@2.1.5
-      '@tailwindcss/jit': 0.1.8_postcss@8.2.10+tailwindcss@2.1.1
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.7_svelte@3.37.0+vite@2.2.2
+      '@tailwindcss/jit': 0.1.8_postcss@8.2.12+tailwindcss@2.1.2
       '@tsconfig/svelte': 1.0.10
       '@types/node': 14.14.41
-      '@vitejs/plugin-legacy': 1.3.2_vite@2.1.5
+      '@vitejs/plugin-legacy': 1.3.2_vite@2.2.2
       '@ymatuhin/debug': 0.0.10
-      autoprefixer: 10.2.5_postcss@8.2.10
+      autoprefixer: 10.2.5_postcss@8.2.12
       nano-css: 5.3.1
-      postcss: 8.2.10
+      postcss: 8.2.12
       postcss-load-config: 3.0.1
       react-snap: 1.23.0
       svelte: 3.37.0
-      svelte-preprocess: 4.7.0_ff7486d6e5a845ff361d36f415eaf31c
-      tailwindcss: 2.1.1_02ae6d0a5709fa7b5d38be2fad8eebc6
+      svelte-preprocess: 4.7.2_f148d825709e68a705530a0639239c2c
+      tailwindcss: 2.1.2_d887a42ede92218908fd5c3cc0b71177
       typescript: 4.2.4
-      vite: 2.1.5
+      vite: 2.2.2
 
   shared:
     specifiers:
@@ -133,8 +133,8 @@ packages:
       picomatch: 2.2.2
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.6_svelte@3.37.0+vite@2.1.5:
-    resolution: {integrity: sha512-P+skZslGT+zPXRH9SlEu21LXuFpkQITRcvQb/NRpZHrxj04VDRbuKwksOfq+vDHO/K4HWioXIAQoQnJ3oomItw==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.7_svelte@3.37.0+vite@2.2.2:
+    resolution: {integrity: sha512-ENvKYY36jrvFP7h1G87k5uOoEh5UM1m8n40J2duqV/R3wHnxfW81SCR1aXo+5CVU8Prm3/jtS4TWs8CUTqO1fw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       svelte: ^3.37.0
@@ -149,13 +149,13 @@ packages:
       source-map: 0.7.3
       svelte: 3.37.0
       svelte-hmr: 0.14.0_svelte@3.37.0
-      vite: 2.1.5
+      vite: 2.2.2
     transitivePeerDependencies:
       - rollup
       - supports-color
     dev: true
 
-  /@tailwindcss/jit/0.1.8_postcss@8.2.10+tailwindcss@2.1.1:
+  /@tailwindcss/jit/0.1.8_postcss@8.2.12+tailwindcss@2.1.2:
     resolution: {integrity: sha512-YNzq0mUimcJldY0u2B475u7fnyOWQkWbQvHcEftkf7VqQIwQrBvSRM7Cycg0MAU42IMgT14MGOmmV8ObUXzNMQ==}
     peerDependencies:
       postcss: ^8.2.6
@@ -167,10 +167,10 @@ packages:
       lodash.topath: 4.5.2
       normalize-path: 3.0.0
       object-hash: 2.1.1
-      postcss: 8.2.10
+      postcss: 8.2.12
       postcss-selector-parser: 6.0.4
       quick-lru: 5.1.1
-      tailwindcss: 2.1.1_02ae6d0a5709fa7b5d38be2fad8eebc6
+      tailwindcss: 2.1.2_d887a42ede92218908fd5c3cc0b71177
     dev: true
 
   /@tsconfig/svelte/1.0.10:
@@ -199,7 +199,7 @@ packages:
       '@types/node': 14.14.41
     dev: true
 
-  /@vitejs/plugin-legacy/1.3.2_vite@2.1.5:
+  /@vitejs/plugin-legacy/1.3.2_vite@2.2.2:
     resolution: {integrity: sha512-nAUHCK5/UaaL9blYiyPE2tNWIHp/QZuQSuiJrRTEH47F9s4/rCWj4IGWpZSNcEbnsTubp7hxnkh9XkSgPT3Dkg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -210,7 +210,7 @@ packages:
       magic-string: 0.25.7
       regenerator-runtime: 0.13.7
       systemjs: 6.8.3
-      vite: 2.1.5
+      vite: 2.2.2
     dev: true
 
   /@ymatuhin/debug/0.0.10:
@@ -286,7 +286,7 @@ packages:
     engines: {node: '>= 4.0.0'}
     dev: true
 
-  /autoprefixer/10.2.5_postcss@8.2.10:
+  /autoprefixer/10.2.5_postcss@8.2.12:
     resolution: {integrity: sha512-7H4AJZXvSsn62SqZyJCP+1AWwOuoYpUfK6ot9vm0e87XD6mT8lDywc9D9OTJPMULyGcvmIxzTAMeG2Cc+YX+fA==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -298,7 +298,7 @@ packages:
       colorette: 1.2.2
       fraction.js: 4.0.13
       normalize-range: 0.1.2
-      postcss: 8.2.10
+      postcss: 8.2.12
       postcss-value-parser: 4.1.0
     dev: true
 
@@ -1574,7 +1574,7 @@ packages:
     engines: {node: '>=10.0'}
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.2.10
+      postcss: 8.2.12
     dev: true
 
   /postcss-load-config/3.0.1:
@@ -1585,13 +1585,13 @@ packages:
       import-cwd: 3.0.0
     dev: true
 
-  /postcss-nested/5.0.5_postcss@8.2.10:
+  /postcss-nested/5.0.5_postcss@8.2.12:
     resolution: {integrity: sha512-GSRXYz5bccobpTzLQZXOnSOfKl6TwVr5CyAQJUPub4nuRJSOECK5AqurxVgmtxP48p0Kc/ndY/YyS1yqldX0Ew==}
     engines: {node: '>=10.0'}
     peerDependencies:
       postcss: ^8.1.13
     dependencies:
-      postcss: 8.2.10
+      postcss: 8.2.12
       postcss-selector-parser: 6.0.4
     dev: true
 
@@ -1622,8 +1622,8 @@ packages:
       supports-color: 5.5.0
     dev: true
 
-  /postcss/8.2.10:
-    resolution: {integrity: sha512-b/h7CPV7QEdrqIxtAf2j31U5ef05uBDuvoXv6L51Q4rcS1jdlXAVKJv+atCFdUXYl9dyTHGyoMzIepwowRJjFw==}
+  /postcss/8.2.12:
+    resolution: {integrity: sha512-BJnGT5+0q2tzvs6oQfnY2NpEJ7rIXNfBnZtQOKCIsweeWXBXeDd5k31UgTdS3d/c02ouspufn37mTaHWkJyzMQ==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       colorette: 1.2.2
@@ -1680,7 +1680,7 @@ packages:
     dependencies:
       commander: 6.2.1
       glob: 7.1.6
-      postcss: 8.2.10
+      postcss: 8.2.12
       postcss-selector-parser: 6.0.4
     dev: true
 
@@ -2001,8 +2001,8 @@ packages:
       svelte: 3.37.0
     dev: true
 
-  /svelte-preprocess/4.7.0_ff7486d6e5a845ff361d36f415eaf31c:
-    resolution: {integrity: sha512-iNrY4YGqi0LD2e6oT9YbdSzOKntxk8gmzfqso1z/lUJOZh4o6fyIqkirmiZ8/dDJFqtIE1spVgDFWgkfhLEYlw==}
+  /svelte-preprocess/4.7.2_f148d825709e68a705530a0639239c2c:
+    resolution: {integrity: sha512-EToG+08rEsA33btv+C5g2qnRArwpTc5AoU0QBB3ZEkYagxAb2yPNsy0qsmtvbJOTBMy6o3oyijDdl3DMpMvpEg==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:
@@ -2045,7 +2045,7 @@ packages:
       '@types/pug': 2.0.4
       '@types/sass': 1.16.0
       detect-indent: 6.0.0
-      postcss: 8.2.10
+      postcss: 8.2.12
       postcss-load-config: 3.0.1
       strip-indent: 3.0.0
       svelte: 3.37.0
@@ -2068,8 +2068,8 @@ packages:
       postcss-selector-parser: 6.0.4
     dev: true
 
-  /tailwindcss/2.1.1_02ae6d0a5709fa7b5d38be2fad8eebc6:
-    resolution: {integrity: sha512-zZ6axGqpSZOCBS7wITm/WNHkBzDt5CIZlDlx0eCVldwTxFPELCVGbgh7Xpb3/kZp3cUxOmK7bZUjqhuMrbN6xQ==}
+  /tailwindcss/2.1.2_d887a42ede92218908fd5c3cc0b71177:
+    resolution: {integrity: sha512-T5t+wwd+/hsOyRw2HJuFuv0LTUm3MUdHm2DJ94GPVgzqwPPFa9XxX0KlwLWupUuiOUj6uiKURCzYPHFcuPch/w==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
@@ -2077,7 +2077,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       '@fullhuman/postcss-purgecss': 3.1.3
-      autoprefixer: 10.2.5_postcss@8.2.10
+      autoprefixer: 10.2.5_postcss@8.2.12
       bytes: 3.1.0
       chalk: 4.1.0
       chokidar: 3.5.1
@@ -2095,10 +2095,10 @@ packages:
       normalize-path: 3.0.0
       object-hash: 2.1.1
       parse-glob: 3.0.4
-      postcss: 8.2.10
+      postcss: 8.2.12
       postcss-functions: 3.0.0
       postcss-js: 3.0.3
-      postcss-nested: 5.0.5_postcss@8.2.10
+      postcss-nested: 5.0.5_postcss@8.2.12
       postcss-selector-parser: 6.0.4
       postcss-value-parser: 4.1.0
       pretty-hrtime: 1.0.3
@@ -2173,13 +2173,13 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite/2.1.5:
-    resolution: {integrity: sha512-tYU5iaYeUgQYvK/CNNz3tiJ8vYqPWfCE9IQ7K0iuzYovWw7lzty7KRYGWwV3CQPh0NKxWjOczAqiJsCL0Xb+Og==}
+  /vite/2.2.2:
+    resolution: {integrity: sha512-Y0IMdu+YuKsisJPk6NaEwEQC7FFfLQSN97ZTE4gvrELrk8dGjTFslhNCG8wkdzMSLCzfOdpCMT8cPXAhqzkPfg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
       esbuild: 0.9.7
-      postcss: 8.2.10
+      postcss: 8.2.12
       resolve: 1.20.0
       rollup: 2.39.0
     optionalDependencies:
