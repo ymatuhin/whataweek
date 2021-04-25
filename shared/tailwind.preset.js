@@ -15,8 +15,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      heading: ["Source Serif Pro", "PT Serif", defaultTheme.fontFamily.sans],
-      base: ["Source Sans Pro", defaultTheme.fontFamily.sans],
+      heading: ["'PT Serif'", defaultTheme.fontFamily.sans],
+      base: ["'Exo 2'", defaultTheme.fontFamily.sans],
       mono: defaultTheme.fontFamily.mono,
     },
     fontSize: {

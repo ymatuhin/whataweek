@@ -9,6 +9,11 @@
       font-size: 20px;
     }
   }
+  @screen lg {
+    html {
+      font-size: 21px;
+    }
+  }
 
   b,
   strong {
@@ -24,6 +29,10 @@
     height: 1px;
     border: 0;
 
-    @apply bg-gray-300 dark:bg-gray-700 transition-colors;
+    @apply bg-gray-200 dark:bg-gray-800 transition-colors;
+  }
+
+  :focus {
+    @apply focus-outline;
   }
 }

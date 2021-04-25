@@ -15,7 +15,7 @@
     {disabled}
     {value}
     bind:group
-    class="flex-shrink-0 mt-1 mr-3 bg-transparent border-gray-300 shadow-sm dark:border-gray-600 text-brand focus:border-brand focus-outline checked:border-0"
+    class="flex-shrink-0 mt-1 mr-3 bg-transparent border-gray-300 shadow-sm dark:border-gray-600 text-brand focus:border-brand checked:border-0"
     type="radio"
   />
   <div><slot /></div>

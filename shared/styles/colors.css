@@ -1,9 +1,9 @@
 @layer base {
   .text-contrast {
-    @apply text-gray-800 dark:text-gray-100 transition-colors;
+    @apply text-gray-950 dark:text-gray-50 transition-colors;
   }
   .text-neutral {
-    @apply text-gray-700 dark:text-gray-300 transition-colors;
+    @apply text-gray-800 dark:text-gray-200 transition-colors;
   }
   .text-pale {
     @apply text-gray-500 dark:text-gray-400 transition-colors;
@@ -11,16 +11,19 @@
   .text-faint {
     @apply text-gray-400 dark:text-gray-500 transition-colors;
   }
+  .text-xfaint {
+    @apply text-gray-300 dark:text-gray-600 transition-colors;
+  }
   .text-brand {
-    @apply text-primary-700 dark:text-primary-500 transition-colors;
+    @apply text-primary-700 dark:text-primary-400 transition-colors;
   }
 }
 
 @layer base {
   .border-brand {
-    @apply border-primary-700 dark:border-primary-500 transition-colors;
+    @apply border-primary-700 dark:border-primary-400 transition-colors;
   }
   .bg-brand {
-    @apply bg-primary-700 dark:bg-primary-500 transition-colors;
+    @apply bg-primary-700 dark:bg-primary-400 transition-colors;
   }
 }

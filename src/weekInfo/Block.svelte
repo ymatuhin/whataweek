@@ -8,11 +8,16 @@
   export { className as class };
 </script>
 
-<div class="pane py-3 px-5 inline-block leading-none {className}">
+<div class="relative pane py-3 px-5 inline-block leading-none {className}">
   {#if overline}
-    <div class="text-sm">{overline}</div>
+    <div
+      class="absolute top-0 -ml-2 px-2 pt-0.5 pb-1 mb-1 font-medium transform -translate-y-1/2 pane text-sm text-pale"
+    >
+      {overline}
+    </div>
+    <div class="mt-1" />
   {/if}
-  <div class="text-center uppercase typo-h2">
+  <div class="tracking-wide uppercase typo-h2">
     {#if isVacation}
       отдых
     {:else}
@@ -20,11 +25,13 @@
     {/if}
   </div>
   {#if underline}
-    <small class="flex w-full text-center bg-pane text-pale">
-      <span class="mr-2">{underline}</span>
+    <div class="flex w-full mt-1 text-sm bg-pane text-pale">
+      <span class="">{underline}</span>
       {#if isEven !== undefined}
-        <span class="ml-auto">{isEven ? "нижняя" : "верхняя"}</span>
+        &nbsp;<span class="ml-auto">
+          <span class="text-faint">(</span>{isEven ? "↓" : "↑"}<span class="text-faint">)</span>
+        </span>
       {/if}
-    </small>
+    </div>
   {/if}
 </div>

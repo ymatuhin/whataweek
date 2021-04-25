@@ -1,6 +1,14 @@
 <script lang="ts">
   import { version } from "../package.json";
-  import { Header, BaseLayout, Metrica, Footer, ShareButtons, Favicons } from "shared/ui/features";
+  import {
+    Header,
+    BaseLayout,
+    Metrica,
+    Footer,
+    ShareButtons,
+    Comments,
+    Favicons,
+  } from "shared/ui/features";
   import WeekInfo from "./weekInfo/WeekInfo.svelte";
 
   let title = `Чет/нечет: Какая сейчас учебная неделя?`;
@@ -42,8 +50,8 @@
 </Header>
 <BaseLayout>
   <main class="w-full">
-    <h2 class="mb-6 typo-overline">Четная или нечетная</h2>
-    <h1 class="mb-12 typo-h1">Какая сейчас <br /> учебная неделя?</h1>
+    <h2 class="mb-3.5 typo-overline text-brand">Четная или нечетная</h2>
+    <h1 class="mb-8 typo-h1">Какая сейчас <br /> учебная неделя?</h1>
 
     <p class="text-lg">
       Во многих учебных заведениях, в зависимости от четности учебной недели, есть разное
@@ -57,7 +65,7 @@
     </p>
 
     <WeekInfo class="space-section" />
-
+    <!-- 
     <h2 class="typo-h3 space-heading-section">Как определятся четность</h2>
 
     <p class="mb-3">
@@ -72,16 +80,16 @@
       Если четность на сайте не совпадает с четностью в вашем заведении, включите «альтернативный
       режим». Браузер запомнит ваш выбор и при следующем посещении, с того-же браузера, вам не нужно
       будет включать его еще раз.
-    </p>
+    </p> -->
   </main>
-  <aside class="flex items-center space-section">
-    <h2 class="inline-block mr-3 text-lg text-contrast">Поделиться</h2>
-    <ShareButtons />
+  <aside>
+    <div class="flex items-center space-section">
+      <h2 class="inline-block mr-3 text-contrast">Поделиться</h2>
+      <ShareButtons />
+    </div>
+    <Comments class="space-section" />
     <Metrica />
   </aside>
-  <hr class="my-16" />
-  Посмотреть комментарии
-  <hr class="my-16" />
 </BaseLayout>
 
-<Footer title="Чет/нечет: Какая сейчас учебная неделя" from="2015" {version} />
+<Footer title="Какая сейчас учебная неделя" from="2015" {version} />

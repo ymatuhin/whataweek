@@ -3,10 +3,7 @@
 </script>
 
 <header class="flex items-center mx-[7%] my-10 md:my-16 lg:mx-16">
-  <a
-    href="/"
-    class="inline-flex w-12 h-12 align-top transition transform focus-outline hocus:scale-90"
-  >
+  <a href="/" class="inline-flex w-12 h-12 align-top transition transform hocus:scale-90">
     <slot name="logo" />
   </a>
 
@@ -15,7 +12,9 @@
     <a href="#" class="mr-6">FAQ</a>
     <a href="#" class="mr-6">Донаты</a>
   </nav> -->
-  <DarkMode class="ml-auto" />
+  <a href="#" class="ml-auto mr-4 hocus:text-contrast">Поддержать проект &nbsp; 🍩</a>
+  <div class="w-[1px] h-4 bg-gray-600 mr-4" />
+  <DarkMode />
   <!-- <button class="burger">
     <div />
   </button> -->

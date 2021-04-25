@@ -13,5 +13,5 @@
   {...$$restProps}
   on:input={handleInput}
   on:change={handleInput}
-  class="{$$props.class} bg-transparent block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-brand focus-outline"
+  class="{$$props.class} bg-transparent block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-brand"
 />

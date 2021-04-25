@@ -7,7 +7,7 @@
 
 <button
   type="button"
-  class="px-3 py-1 rounded focus-outline text-pale {activeClass} {$$props.class}"
+  class="px-3 py-1 rounded text-pale {activeClass} {$$props.class}"
   on:click={() => (active = type)}
 >
   <slot /></button

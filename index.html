@@ -13,7 +13,7 @@
       onload="this.rel='stylesheet'"
     />
   </head>
-  <body class="transition bg-gray-50 text-neutral font-base dark:bg-gray-900">
+  <body class="tracking-wide transition bg-gray-50 text-neutral font-base dark:bg-gray-900">
     <script>
       try {
         const val = JSON.parse(localStorage["dark-mode"] || "{}").value;
@@ -21,7 +21,7 @@
           val === true ||
           (typeof val === undefined && window.matchMedia("(prefers-color-scheme: dark)").matches)
         )
-          return document.body.classList.add("dark");
+          document.documentElement.classList.add("dark");
       } catch (e) {}
     </script>
     <div id="app"></div>

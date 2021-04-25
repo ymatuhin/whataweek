@@ -1,4 +1,4 @@
-<div class="flex justify-center mx-[7%] my-12 md:my-16 lg:mx-16">
+<div class="flex justify-center mx-[7%] my-12 md:my-16 lg:mx-16 !mb-0">
   <div class="justify-end flex-1 hidden mr-4 vertical-space 2xl:flex">
     <slot name="left" />
   </div>
