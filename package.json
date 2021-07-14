@@ -1,0 +1,35 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "SSR=true vite build --ssr src/entry-server.tsx --outDir dist/ssr",
+    "critical": "node ./critical.mjs",
+    "prerender": "node ./prerender.mjs && rm -rf dist/ssr",
+    "preview": "npm run build && npm run prerender && npm run critical && npm run serve",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "preact": "^10.5.14",
+    "preact-iso": "^2.0.3",
+    "react": "npm:preact@^10.5.13",
+    "react-dom": "npm:preact@^10.5.13",
+    "react-head": "^3.4.0",
+    "wouter-preact": "^2.7.4"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.0.0",
+    "@types/react": "^17.0.14",
+    "@vitejs/plugin-legacy": "^1.4.4",
+    "autoprefixer": "^10.3.1",
+    "critical": "^4.0.0",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.1.7",
+    "postcss": "^8.3.5",
+    "preact-render-to-string": "^5.1.19",
+    "tailwindcss": "^2.2.4",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.2"
+  }
+}
