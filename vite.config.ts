@@ -12,7 +12,7 @@ export default defineConfig({
     include: ["@ymatuhin/debug"],
   },
   server: {
-    port: 1010,
+    port: 1111,
   },
   plugins: [
     svelte({
